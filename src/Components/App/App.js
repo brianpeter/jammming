@@ -15,6 +15,16 @@ class App extends Component {
         album:'blah'
       },
     ],
+
+    playlistName : 'My Playlist',
+
+    playlistTracks : [
+      {
+        name:'blah blah',
+        artist:'Hardwell',
+        album:'blah blah'
+      }
+    ]
   }
 
     //this.searchYelp = this.searchYelp.bind(this);
@@ -26,13 +36,13 @@ class App extends Component {
       <div>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
-          //Add a SearchBar component
+          
           <SearchBar />
           <div className="App-playlist">
-            //Add a SearchResults component
+
             <SearchResults searchResults = {this.state.searchResults}/>
-            //Add a Playlist component
-            <Playlist />
+
+            <Playlist playlistName = {this.state.playlistName} playlistTracks = {this.state.playlistTracks} />
           </div>
         </div>
       </div>
