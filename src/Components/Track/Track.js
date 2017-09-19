@@ -2,6 +2,25 @@ import React, { Component } from 'react';
 import './Track.css';
 
 class Track extends Component {
+  constructor(props) {
+    super(props);
+
+    this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+  }
+
+  //not complete vv step 45
+  addTrack(track){
+    /*this.props.track this.props.onAdd */
+  }
+
+  removeTrack(track){
+    /*if (this.state.playlistTracks) {
+      return
+      this.setState({
+        playlistTracks: playlistTracks
+      });*/
+  }
 
   renderAction() {
     if (this.props.isRemoval) {
@@ -9,6 +28,7 @@ class Track extends Component {
     }
       return <a className="Track-action" onClick={this.addTrack}>+</a>;
   }
+
 
   render() {
     return (
