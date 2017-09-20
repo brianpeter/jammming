@@ -9,17 +9,13 @@ class Track extends Component {
     this.removeTrack = this.removeTrack.bind(this);
   }
 
-  //not complete vv step 45
-  addTrack(track){
-    /*this.props.track this.props.onAdd */
+
+  addTrack(event){
+    this.props.onAdd(this.props.track);
   }
 
-  removeTrack(track){
-    /*if (this.state.playlistTracks) {
-      return
-      this.setState({
-        playlistTracks: playlistTracks
-      });*/
+  removeTrack(event){
+    this.props.onRemove(this.props.track);
   }
 
   renderAction() {
