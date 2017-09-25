@@ -12,6 +12,7 @@ class Track extends Component {
 
   addTrack(event){
     this.props.onAdd(this.props.track);
+    
   }
 
   removeTrack(event){
@@ -22,7 +23,7 @@ class Track extends Component {
     if (this.props.isRemoval) {
       return <a className="Track-action" onClick={this.removeTrack}>-</a>
     }
-      return <a className="Track-action" onClick={this.addTrack}>+</a>;
+      return <a className="Track-action" onClick={this.addTrack} >+</a>;
   }
 
 
